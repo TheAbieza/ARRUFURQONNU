@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+:root{
+    --white:#EDF5E1;
+    --light:#8EE4AF;
+    --base:#5CDB95;
+    --dark:#379683;
+    --black:#05386B;
+    --font:'Viga', sans-serif;
+}
+
+body {
+    background-color: var(--base);
+}
+
+body, 
+button, 
+input {
+    font-family: var(--font);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 5%;
+    width:100%;
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+}
+
+.right {
+    padding: 5%;
+    flex: 1;
+}
+
+.left {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--base);
+    font-size: 1.5rem;
+}
+
+.heading p{
+    font-size: 1.2rem;
+}
+
+.iniweem {
+    font-size: 0.8rem;
+    color: var(--black);
+    margin-top: auto;
+}
+
+.group {
+    margin-bottom: 30px;
+}
+
+.group input {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    font-size: 14px;
+    outline: none;
+}
+
+.group.message {
+    margin-top: 30%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 0;
+}
+
+.group input::placeholder {
+    color: var(--black);
+}
+
+.butt {
+    padding: 10px 50px 10px 50px;
+    background: var(--base);
+    border-color: solid var(--base);
+    border-style: solid;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 2%;
+    }
+
+.butt:hover {
+    background-color: transparent;
+    border-color: var(--base);
+    color: var(--base);
+}

@@ -1,0 +1,216 @@
+    @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+:root{
+    --white:#EDF5E1;
+    --light:#8EE4AF;
+    --base:#5CDB95;
+    --dark:#379683;
+    --black:#05386B;
+    --font:'Viga', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+body{
+    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*kiri*/
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.left{
+    padding: 3%;
+    background-color: var(--light);
+    width: 52vw;
+
+}
+
+.group{
+    position:relative; 
+    margin-bottom:45px; 
+}
+
+.group input{
+    font-size:1rem;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid var(--black);
+    background-color: var(--light);
+}
+
+.group input:focus { outline:none; }
+
+label{
+    color: var(--black); 
+    font: size 1rem;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.group :focus ~ label, input:valid ~ label{
+    top:-20px;
+    font-size:1rem;
+    color: var(--black)
+}
+
+.bar { position:relative; display:block; width:300px; }
+
+.bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background: var(--black);
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.highlight{
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+.group input:focus ~ .highlight{
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login a{
+    font-size: 1rem;
+    padding: 9px 18px;
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+}
+
+.login input{
+    font-size: 1rem;
+    padding: 8px 30px;
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+   
+}
+
+.login input:hover{
+    background-color: transparent;
+    color: var(--black);
+}
+
+.back {
+    display: flex;
+}
+
+.back button {
+    margin-top: auto;
+    font-size: 1rem;
+    padding: 8px 20px;
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.back button:hover{
+    background-color: transparent;
+    color: var(--black);
+}
+
+.heading {
+    color: var(--black);
+    margin-bottom: 10%;
+}
+
+.form {
+    height: 72vh;
+}
+
+.bott {
+    color: var(--black);
+    font-size: 0.8rem;
+}
+
+/*kanan*/
+
+.right {
+    width: 100%;
+}
+
+.right img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(50%);
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
